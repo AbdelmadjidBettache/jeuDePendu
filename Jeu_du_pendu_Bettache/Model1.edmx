@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="jeu_de_penduModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="dictionnaire">
+          <Key>
+            <PropertyRef Name="mot" />
+          </Key>
+          <Property Name="mot" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="langue" Type="nvarchar" MaxLength="50" />
+          <Property Name="niveau" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="historique">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mot" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="pointage" Type="int" Nullable="false" />
+          <Property Name="erreurs" Type="int" Nullable="false" />
+          <Property Name="date" Type="date" Nullable="false" />
+          <Property Name="temps" Type="time" Precision="7" Nullable="false" />
+          <Property Name="resultat" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="jeu_de_penduModelStoreContainer">
+          <EntitySet Name="dictionnaire" EntityType="Self.dictionnaire" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="historique" EntityType="Self.historique" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="jeu_de_penduModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="dictionnaire">
+          <Key>
+            <PropertyRef Name="mot" />
+          </Key>
+          <Property Name="mot" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="langue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="niveau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="historique">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mot" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pointage" Type="Int32" Nullable="false" />
+          <Property Name="erreurs" Type="Int32" Nullable="false" />
+          <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="temps" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="resultat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="jeu_de_penduEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="dictionnaires" EntityType="Self.dictionnaire" />
+          <EntitySet Name="historiques" EntityType="Self.historique" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="jeu_de_penduModelStoreContainer" CdmEntityContainer="jeu_de_penduEntities">
+          <EntitySetMapping Name="dictionnaires">
+            <EntityTypeMapping TypeName="jeu_de_penduModel.dictionnaire">
+              <MappingFragment StoreEntitySet="dictionnaire">
+                <ScalarProperty Name="mot" ColumnName="mot" />
+                <ScalarProperty Name="langue" ColumnName="langue" />
+                <ScalarProperty Name="niveau" ColumnName="niveau" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="historiques">
+            <EntityTypeMapping TypeName="jeu_de_penduModel.historique">
+              <MappingFragment StoreEntitySet="historique">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="mot" ColumnName="mot" />
+                <ScalarProperty Name="pointage" ColumnName="pointage" />
+                <ScalarProperty Name="erreurs" ColumnName="erreurs" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="temps" ColumnName="temps" />
+                <ScalarProperty Name="resultat" ColumnName="resultat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

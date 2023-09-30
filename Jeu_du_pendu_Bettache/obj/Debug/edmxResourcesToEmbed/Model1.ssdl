@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="jeu_de_penduModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="dictionnaire">
+    <Key>
+      <PropertyRef Name="mot" />
+    </Key>
+    <Property Name="mot" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="langue" Type="nvarchar" MaxLength="50" />
+    <Property Name="niveau" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="historique">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mot" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="pointage" Type="int" Nullable="false" />
+    <Property Name="erreurs" Type="int" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="temps" Type="time" Precision="7" Nullable="false" />
+    <Property Name="resultat" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="jeu_de_penduModelStoreContainer">
+    <EntitySet Name="dictionnaire" EntityType="Self.dictionnaire" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="historique" EntityType="Self.historique" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

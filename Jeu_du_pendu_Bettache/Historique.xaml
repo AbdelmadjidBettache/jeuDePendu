@@ -1,0 +1,15 @@
+﻿<Window x:Class="Jeu_du_pendu_Bettache.Historique"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jeu_du_pendu_Bettache"
+        mc:Ignorable="d"
+        Title="Historique" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Button x:Name="btnAccueil" Content="ACCUEIL" HorizontalAlignment="Left" Margin="344,364,0,0" VerticalAlignment="Top" Height="26" Width="96" FontWeight="Bold" Click="btnAccueil_Click"/>
+        <Image HorizontalAlignment="Left" Height="69" Margin="357,293,0,0" VerticalAlignment="Top" Width="76" Source="/accueil.jpg"/>
+        <DataGrid x:Name="dgHistorique"  Margin="102,30,102,181" IsSynchronizedWithCurrentItem="true" ItemsSource="{Binding}" DisplayMemberPath="id"/>
+
+    </Grid>
+</Window>

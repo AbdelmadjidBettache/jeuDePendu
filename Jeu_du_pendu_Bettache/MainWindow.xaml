@@ -1,0 +1,21 @@
+﻿<Window x:Class="Jeu_du_pendu_Bettache.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jeu_du_pendu_Bettache"
+        mc:Ignorable="d"
+        Title="Acceil" Height="450" Width="800" Background="#FFCAE5E8">
+    <Grid>
+        <Button x:Name="btnJouer" Content="JOUER" HorizontalAlignment="Left" Margin="141,272,0,0" VerticalAlignment="Top" Width="98" Height="24" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Background="#FF44DCDC" FontWeight="Bold" FontSize="11" Click="btnJouer_Click"/>
+        <Button x:Name="btnPreference" Content="PRÉFÉRENCES" HorizontalAlignment="Left" Margin="362,272,0,0" VerticalAlignment="Top" Width="98" Height="24" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Background="#FF44DCDC" FontWeight="Bold" FontSize="11" Click="btnPreference_Click"/>
+        <Button x:Name="btnHistorique" Content="HISTORIQUE" HorizontalAlignment="Left" Margin="571,272,0,0" VerticalAlignment="Top" Width="98" Height="24" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Background="#FF44DCDC" FontWeight="Bold" FontSize="11" Click="btnHistorique_Click"/>
+        <Image HorizontalAlignment="Left" Height="70" Margin="151,187,0,0" VerticalAlignment="Top" Width="82" Source="/le-pendu.png"/>
+        <Image HorizontalAlignment="Left" Height="70" Margin="585,187,0,0" VerticalAlignment="Top" Width="98" Source="/historique.png"/>
+        <Image HorizontalAlignment="Left" Height="70" Margin="372,187,0,0" VerticalAlignment="Top" Width="78" Source="/setting.png"/>
+        <Label Content="Bienvenue au jeu du pendu!" HorizontalAlignment="Left" Margin="139,53,0,0" VerticalAlignment="Top" Width="516" FontWeight="Bold" FontSize="36" Foreground="{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}"/>
+        <Button x:Name="btnQuitter" Content="QUITTER LE JEU" HorizontalAlignment="Left" Margin="657,358,0,0" VerticalAlignment="Top" Width="110" Height="24" FontWeight="Bold" FontSize="11" Click="btnQuitter_Click" Foreground="{DynamicResource {x:Static SystemColors.InfoTextBrushKey}}" Background="#FFFA0C5A"/>
+
+
+    </Grid>
+</Window>

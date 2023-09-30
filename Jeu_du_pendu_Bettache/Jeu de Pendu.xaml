@@ -1,0 +1,51 @@
+﻿<Window x:Class="Jeu_du_pendu_Bettache.Jeu_de_Pendu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jeu_du_pendu_Bettache"
+        mc:Ignorable="d"
+        Title="Jeu de Pendu" Height="450" Width="800">
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="274" Margin="42,12,0,0" VerticalAlignment="Top" Width="213" Source="/err06.jpg"/>
+        <Label Content="Score:" HorizontalAlignment="Left" Margin="427,22,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold"/>
+        <Label x:Name="lblScore" Content="" HorizontalAlignment="Left" Margin="493,22,0,0" VerticalAlignment="Top" Width="45" FontWeight="Bold"/>
+        <Label Content="Trouver ce Mot:" HorizontalAlignment="Left" Margin="372,69,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold"/>
+        <Label x:Name="lblMot" Content=""  HorizontalAlignment="Left" Margin="493,69,0,0" VerticalAlignment="Top" Width="136" FontWeight="Bold"/>
+        <Grid Margin="372,100,98,174">
+            <Button Content="A" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="H" HorizontalAlignment="Left" Margin="290,10,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="G" HorizontalAlignment="Left" Margin="249,10,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="F" HorizontalAlignment="Left" Margin="209,10,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="E" HorizontalAlignment="Left" Margin="167,10,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="D" HorizontalAlignment="Left" Margin="127,10,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="C" HorizontalAlignment="Left" Margin="87,10,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="B" HorizontalAlignment="Left" Margin="48,10,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="I" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="P" HorizontalAlignment="Left" Margin="290,43,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="O" HorizontalAlignment="Left" Margin="249,43,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="N" HorizontalAlignment="Left" Margin="209,43,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="M" HorizontalAlignment="Left" Margin="167,43,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="L" HorizontalAlignment="Left" Margin="127,43,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="K" HorizontalAlignment="Left" Margin="87,43,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="J" HorizontalAlignment="Left" Margin="48,43,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="Q" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="X" HorizontalAlignment="Left" Margin="290,76,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="W" HorizontalAlignment="Left" Margin="249,76,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="V" HorizontalAlignment="Left" Margin="209,76,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="U" HorizontalAlignment="Left" Margin="167,76,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="T" HorizontalAlignment="Left" Margin="127,76,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="S" HorizontalAlignment="Left" Margin="87,76,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="R" HorizontalAlignment="Left" Margin="48,76,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="Y" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+            <Button Content="Z" HorizontalAlignment="Left" Margin="48,109,0,0" VerticalAlignment="Top" Height="25" Width="25" FontWeight="Bold" Click="Button_Click"/>
+
+        </Grid>
+        <Button x:Name="btnDebut" Content="Débuter le jeu" HorizontalAlignment="Left" Margin="494,269,0,0" VerticalAlignment="Top" Width="133" FontWeight="Bold" Click="btnDebut_Click"/>
+        <Button x:Name="btnPreference" Content="PRÉFÉRENCES" HorizontalAlignment="Left" Margin="421,371,0,0" VerticalAlignment="Top" Width="95" Height="20" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Background="#FF44DCDC" FontWeight="Bold" Click="btnPreference_Click"/>
+        <Button x:Name="btnHistorique" Content="HISTORIQUE" HorizontalAlignment="Left" Margin="581,371,0,0" VerticalAlignment="Top" Width="95" Height="20" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Background="#FF44DCDC" FontWeight="Bold" Click="btnHistorique_Click"/>
+        <Image HorizontalAlignment="Left" Height="36" Margin="606,325,0,0" VerticalAlignment="Top" Width="52" Source="/historique.png"/>
+        <Image HorizontalAlignment="Left" Height="36" Margin="449,326,0,0" VerticalAlignment="Top" Width="48" Source="/setting.png"/>
+
+    </Grid>
+</Window>

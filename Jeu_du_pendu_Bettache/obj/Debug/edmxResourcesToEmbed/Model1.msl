@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="jeu_de_penduModelStoreContainer" CdmEntityContainer="jeu_de_penduEntities">
+    <EntitySetMapping Name="dictionnaires">
+      <EntityTypeMapping TypeName="jeu_de_penduModel.dictionnaire">
+        <MappingFragment StoreEntitySet="dictionnaire">
+          <ScalarProperty Name="mot" ColumnName="mot" />
+          <ScalarProperty Name="langue" ColumnName="langue" />
+          <ScalarProperty Name="niveau" ColumnName="niveau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historiques">
+      <EntityTypeMapping TypeName="jeu_de_penduModel.historique">
+        <MappingFragment StoreEntitySet="historique">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mot" ColumnName="mot" />
+          <ScalarProperty Name="pointage" ColumnName="pointage" />
+          <ScalarProperty Name="erreurs" ColumnName="erreurs" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="temps" ColumnName="temps" />
+          <ScalarProperty Name="resultat" ColumnName="resultat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
